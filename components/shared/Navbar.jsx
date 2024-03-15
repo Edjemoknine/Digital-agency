@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   return (
     <div className="text-white">
-      <div className="p-6 md:p-10 flex items-center justify-between z-10">
+      <div className="p-6 flex items-center justify-between z-10">
         <Link href="/">
           <Image
             src="/logo.svg"
