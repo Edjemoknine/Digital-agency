@@ -1,9 +1,12 @@
 import { Spotlight } from "@/components/ui/spotlight";
 import Navbar from "../components/shared/Navbar";
 import SliderOne from "@/components/shared/Slider";
+import Project from "@/components/shared/Project";
+import Portfolio from "@/components/shared/Portfolio";
+import Shopify from "@/components/shared/Shopify";
 export default function Home() {
   return (
-    <main className="w-full  h-screen p-6 md:p-10 md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <main className="w-full  min-h-screen p-6 md:p-10 md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Navbar />
       <Spotlight className="hidden  md:flex  md:left-80 " fill="white" />
       <div className="p-4  mx-auto  relative  z-10  w-full  pt-10  md:pt-32  px-2">
@@ -26,6 +29,15 @@ export default function Home() {
         <div className="w-full  pt-20">
           <SliderOne />
         </div>
+        <div className="w-full  pt-20">
+          <Project />
+        </div>
+        <div className="w-full  pt-20">
+          <Portfolio />
+        </div>
+      </div>
+      <div className="w-full  pt-20">
+        <Shopify />
       </div>
     </main>
   );
