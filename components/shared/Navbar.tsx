@@ -5,13 +5,14 @@ import Link from "next/link";
 import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import DropDownMenu from "./DropDownMenu";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const closeDropDown = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="text-white">
+    <div className="bg-black/[0.96]">
       <div className="p-6 flex items-center justify-between z-10">
         <Link href="/">
           <Image
@@ -24,10 +25,18 @@ const Navbar = () => {
           />
         </Link>
         <div className="cursor-pointer hidden md:flex items-center text-slate-300 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 space-x-10 to-neutral-400 bg-opacity-50 ">
-          <div className="hover:text-gray-50">Website Design</div>
-          <div className="hover:text-gray-50">Graphic Design</div>
-          <div className="hover:text-gray-50">Shopify Design</div>
-          <div className="hover:text-gray-50">Brands</div>
+          <div className="hover:text-gray-50">
+            <a href="#projects">Website Design</a>
+          </div>
+          <div className="hover:text-gray-50">
+            <a href="#portfolio">Portfolio</a>
+          </div>
+          <div className="hover:text-gray-50">
+            <a href="#shopify">Shopify </a>
+          </div>
+          <div className="hover:text-gray-50">
+            <a href="#services">Services</a>
+          </div>
           <Link className="hover:text-gray-50" href={"/pricing"}>
             Pricing
           </Link>

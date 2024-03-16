@@ -3,7 +3,7 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div>
+    <section id="projects">
       <div className="p-4  mx-auto  relative  z-10  w-full  pt-10  md:pt-32  px-2">
         <div className="text-4xl  pb-5  md:text-6xl  px-6  text-center  bg-clip-text  text-transparent  bg-gradient-to-b  from-blue-300  to-lime-400  bg-opacity-50">
           Some of our projects
@@ -132,7 +132,7 @@ const Project = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

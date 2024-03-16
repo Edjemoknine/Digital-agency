@@ -1,13 +1,35 @@
+"use client";
 import { Spotlight } from "@/components/ui/spotlight";
 import Navbar from "../components/shared/Navbar";
 import SliderOne from "@/components/shared/Slider";
 import Project from "@/components/shared/Project";
 import Portfolio from "@/components/shared/Portfolio";
 import Shopify from "@/components/shared/Shopify";
+import Services from "@/components/shared/Services";
+import { AccordionDemo } from "@/components/shared/Faq";
+import { useRef } from "react";
+
 export default function Home() {
+  const ProjectRef = useRef<HTMLDivElement>(null);
+  const PortfolioRef = useRef<HTMLDivElement>(null);
+  const ShopifyRef = useRef<HTMLDivElement>(null);
+  const ServicesRef = useRef<HTMLDivElement>(null);
+
+  const scrollToProjects = () => {
+    ProjectRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToPortfolio = () => {
+    PortfolioRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToShopify = () => {
+    ShopifyRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToServices = () => {
+    ServicesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <main className="w-full  min-h-screen p-6 md:p-10 md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Navbar />
       <Spotlight className="hidden  md:flex  md:left-80 " fill="white" />
       <div className="p-4  mx-auto  relative  z-10  w-full  pt-10  md:pt-32  px-2">
         <div className="text-4xl  pb-5  md:text-6xl  px-6  text-center  bg-clip-text  text-transparent  bg-gradient-to-b  from-neutral-50  to-neutarl-400  bg-opacity-50">
@@ -28,16 +50,20 @@ export default function Home() {
         </div>
         <div className="w-full  pt-20">
           <SliderOne />
+          <div ref={ProjectRef}>
+            <Project />
+          </div>
+          <div ref={PortfolioRef}>
+            <Portfolio />
+          </div>
+          <div ref={ShopifyRef}>
+            <Shopify />
+          </div>
+          <div ref={ServicesRef}>
+            <Services />
+          </div>
+          <AccordionDemo />
         </div>
-        <div className="w-full  pt-20">
-          <Project />
-        </div>
-        <div className="w-full  pt-20">
-          <Portfolio />
-        </div>
-      </div>
-      <div className="w-full  pt-20">
-        <Shopify />
       </div>
     </main>
   );

@@ -6,7 +6,7 @@ import { EvervaultCard } from "../ui/Evervolt-card";
 
 const Portfolio = () => {
   return (
-    <div>
+    <section id="portfolio">
       <div className="p-4  mx-auto  relative  z-10  w-full  pt-10  md:pt-32  px-2">
         <div className="text-4xl  pb-5  md:text-6xl  px-6  text-center  bg-clip-text  text-transparent  bg-gradient-to-b  from-neutral-50  to-neutarl-400  bg-opacity-50">
           Create, Grow, and <br />
@@ -26,7 +26,7 @@ const Portfolio = () => {
           <EvervaultCard text="hover" />
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
