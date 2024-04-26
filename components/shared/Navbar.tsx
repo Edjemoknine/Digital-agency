@@ -14,16 +14,19 @@ const Navbar = () => {
   return (
     <div className="bg-black/[0.96]">
       <div className="p-6 flex items-center justify-between z-10">
-        <Link href="/">
-          <Image
-            src="/logo.svg"
-            alt="logo"
-            width={80}
-            height={80}
-            priority
-            className="w-10 h-10 md:w-14 md:h-14"
-          />
-        </Link>
+        <div className="flex gap-2 items-center text-white">
+          <Link href="/">
+            <Image
+              src="/arc_dark.svg"
+              alt="logo"
+              width={50}
+              height={50}
+              priority
+              className="w-8 h-8 md:w-10 md:h-14"
+            />
+          </Link>
+          <h2 className="text-2xl font-semibold">MADE</h2>
+        </div>
         <div className="cursor-pointer hidden md:flex items-center text-slate-300 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 space-x-10 to-neutral-400 bg-opacity-50 ">
           <div className="hover:text-gray-50">
             <a href="#projects">Website Design</a>

@@ -3,7 +3,7 @@ import React from "react";
 
 const Shopify = () => {
   return (
-    <section id="shopify" className="mt-10 md:py-6 bg-white w-full rounded-3xl">
+    <section id="shopify" className="mt-24 md:py-6 bg-white w-full rounded-3xl">
       <div className="p-4  mx-auto  relative  z-10  w-full  pt-10  md:pt-20  px-2">
         <div className="text-4xl  pb-5  md:text-6xl  px-6  text-center  bg-clip-text  text-transparent  bg-gradient-to-b  from-neutral-950  to-gray-400  bg-opacity-50">
           Shopify Store
